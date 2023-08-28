@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      var login = false;
+      const users = [
+        { name: "user", password: "1234" },
+        { name: "elon", password: "4567" },
+        { name: "mark", password: "pass" },
+      ];
+      function success_el() {
+        document.getElementById("ele1").hidden = true;
+        document.getElementById("ele2").hidden = true;
+        document.getElementById("user_n").hidden = true;
+        document.getElementById("pass").hidden = true;
+        document.getElementById("title1").innerHTML = "Logged IN";
+      }
+      function handleLogin() {
+        for (item of users) {
+          if (
+            document.getElementById("user_n").value == item.name &&
+            document.getElementById("pass").value == item.password
+          ) {
+            login = true;
+          }
+        }
+        if (login == true) {
+          success_el();
+        } else {
+          alert("Invalid credentials");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div
+      class="flex w-full h-screen bg-gradient-to-br from-orange-400 to-yellow-400 flex-col justify-center items-center"
+    >
+      <div class="flex flex-col bg-white/50 gap-2 p-4 rounded-md">
+        <h1 id="title1" class="text-lg mx-auto font-bold">Login</h1>
+        <div>
+          <h1 id="ele1">Username</h1>
+          <input id="user_n" class="px-2 py-1" type="text" class="my-1" />
+        </div>
+        <div>
+          <h1 id="ele2">Password</h1>
+          <input id="pass" class="px-2 py-1" type="password" class="my-1" />
+        </div>
+        <div
+          onclick="handleLogin()"
+          class="bg-gradient-to-br transition-all hover:to-indigo-600 cursor-pointer from-purple-400 to-indigo-400 text-white mx-auto px-4 rounded-full my-4"
+        >
+          Login
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
