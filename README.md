@@ -23,3 +23,5 @@ The following are a few resources that we referred to while preparing for the SR
 - [The Browser Accessibilty Tree](https://www.tpgi.com/the-browser-accessibility-tree/)
 - [Accessible Names](https://www.tpgi.com/what-is-an-accessible-name/)
 - [JavaScript w3schools](https://www.w3schools.com/js/)
+- [Deployment using GitHub](https://pages.github.com/)
+- [Deployment using Netlify](https://www.freecodecamp.org/news/publish-your-website-netlify-github/)
